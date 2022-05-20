@@ -1,0 +1,9 @@
+---
+# 
+- name: Deploy Quay
+  hosts: quay_registries
+  tasks:
+    # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/script_module.html
+    - name: Installs mirrored registry
+      ansible.builtin.script:
+        cmd: scripts/install-quay.sh {{quay_hostname}} {{registry_user}} {{registry_pwd}} "{{rhel_pull_secret}}"

@@ -1,0 +1,5 @@
+[proxies]
+host1
+
+[quay_registries]
+host2 quay_hostname=host2.domain.com
