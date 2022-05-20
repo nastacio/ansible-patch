@@ -20,7 +20,7 @@ Patchwork of ansible exercises and workshops.
 ## Lesson 2
 
 1. Create a script for installing Quay registry (`tasks/scripts/install-quay.sh`)
-1. Create a file `actual.hosts`with the actual hosts, matching the structure of `etc/ansible/hosts`
+1. Create an [inventory file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#adding-variables-to-inventory) `actual.hosts` with the target hosts, matching the structure of `etc/ansible/hosts`
 1. Create a file `registry-data.env`, with the following values:
 
     ```
@@ -50,3 +50,8 @@ Patchwork of ansible exercises and workshops.
         -e @/absolute/path/to/registry-data.env \
         --vault-password-file /absolute/path/to/registr-data.pwd
     ```
+
+## References 
+
+- [Ansible - Getting Started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
+- [Installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#from-pip)
